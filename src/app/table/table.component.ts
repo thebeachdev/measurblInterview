@@ -32,9 +32,17 @@ export class TableComponent implements OnInit {
       groupA => {
         this.tblService.getGroupB().subscribe(
           groupB => {
-            console.log(groupB);
+            console.log(groupA);
             // [{ "id":2, "age":5 }]
             // for (let user in groupA) {
+            // }
+            // Did have time to get this working, but it would be something like this.
+            // for (let aUser in groupB) {
+            //   for (anotherUser in groupA) {
+            //     if (aUser.id === anotherUser.id) {
+            //       aUser.push({ age: aUser.age});
+            //     }
+            //   }
             // }
             this.users = groupB; // an array of obejcts [{...}, {...}]
           }, error => {
